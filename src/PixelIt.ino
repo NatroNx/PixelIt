@@ -3284,7 +3284,7 @@ void loop()
 		DrawClock(false);
 	}
 
-	if (millis() - sendLuxPrevMillis >= 1000)
+	if (millis() - sendLuxPrevMillis >= 10000)
 	{
 		sendLuxPrevMillis = millis();
 
