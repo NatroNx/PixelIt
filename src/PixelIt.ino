@@ -3284,7 +3284,7 @@ void loop()
 		DrawClock(false);
 	}
 
-	if (millis() - sendLuxPrevMillis >= 10000)
+	if (millis() - sendLuxPrevMillis >= 30000)
 	{
 		sendLuxPrevMillis = millis();
 
@@ -3325,13 +3325,13 @@ void loop()
 		}
 	}
 
-	if (millis() - sendSensorPrevMillis >= 3000)
+	if (millis() - sendSensorPrevMillis >= 30000)
 	{
 		sendSensorPrevMillis = millis();
 		SendSensor(false);
 	}
 
-	if (millis() - sendInfoPrevMillis >= 3000)
+	if (millis() - sendInfoPrevMillis >= 60000)
 	{
 		sendInfoPrevMillis = millis();
 		SendMatrixInfo(false);
